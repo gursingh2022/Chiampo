@@ -1,0 +1,47 @@
+﻿@{ ViewData["Title"] = "Projects"; }
+
+<div>
+    <div class="uk-section uk-section-primary">
+        <div class="uk-container">
+            <h3>Projects</h3>
+        </div>
+    </div>
+</div>
+
+<div class="uk-child-width-expand uk-text-center uk-grid" uk-grid>
+    <a asp-controller="Projects" asp-action="ColourFlipper">
+        <div class="uk-card uk-card-default uk-card-hover">
+            <div class="uk-card-media-top">
+                <img src="" alt="">
+            </div>
+
+            <div class="uk-card-body">
+                <h3 class="uk-card-title">Colour Flipper</h3>
+            </div>
+        </div>
+    </a>
+
+    <a asp-controller="Projects" asp-action="Counter">
+        <div class="uk-card uk-card-default uk-card-hover">
+            <div class="uk-card-media-top">
+                <img src="" alt="">
+            </div>
+
+            <div class="uk-card-body">
+                <h3 class="uk-card-title">Counter</h3>
+            </div>
+        </div>
+    </a>
+    
+    <a>
+        <div class="uk-card uk-card-default uk-card-hover">
+            <div class="uk-card-media-top">
+                <img src="" alt="">
+            </div>
+
+            <div class="uk-card-body">
+                <h3 class="uk-card-title">Project 3</h3>
+            </div>
+        </div>
+    </a>
+</div>

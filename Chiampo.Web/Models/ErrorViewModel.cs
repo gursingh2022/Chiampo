@@ -1,6 +1,6 @@
 using System;
 
-namespace TestProject.Models
+namespace Chiampo.Web.Models
 {
     public class ErrorViewModel
     {
