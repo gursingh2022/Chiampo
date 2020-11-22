@@ -3,17 +3,19 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using Chiampo.Web.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using TestProject.Models;
 
-namespace TestProject.Controllers
+// For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+
+namespace Chiampo.Web.Controllers
 {
-    public class HomeController : Controller
+    public class ProjectsController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly ILogger<ProjectsController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        public ProjectsController(ILogger<ProjectsController> logger)
         {
             _logger = logger;
         }
@@ -23,12 +25,12 @@ namespace TestProject.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult ColourFlipper()
         {
             return View();
         }
 
-        public IActionResult Todo()
+        public IActionResult Counter()
         {
             return View();
         }
