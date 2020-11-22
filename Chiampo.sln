@@ -1,7 +1,7 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject", "TestProject\TestProject.csproj", "{F99DDE84-82A6-4570-8A1F-8BCA6A5DE885}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chiampo.Web", "Chiampo.Web\Chiampo.Web.csproj", "{5B0152ED-97CD-4FFD-863A-30F0022FB556}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,9 +9,9 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F99DDE84-82A6-4570-8A1F-8BCA6A5DE885}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F99DDE84-82A6-4570-8A1F-8BCA6A5DE885}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F99DDE84-82A6-4570-8A1F-8BCA6A5DE885}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F99DDE84-82A6-4570-8A1F-8BCA6A5DE885}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B0152ED-97CD-4FFD-863A-30F0022FB556}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B0152ED-97CD-4FFD-863A-30F0022FB556}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B0152ED-97CD-4FFD-863A-30F0022FB556}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B0152ED-97CD-4FFD-863A-30F0022FB556}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
