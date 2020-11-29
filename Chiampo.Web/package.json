@@ -1,20 +1,18 @@
 {
-  "name": "wwwroot",
+  "name": "chiampo.web",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "directories": {
-    "lib": "lib"
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-uglifycss": "^1.1.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "gulp": "^4.0.2"
-  },
-  "dependencies": {
-    "gulp-uglifycss": "^1.1.0"
-  }
+  "license": "ISC"
 }

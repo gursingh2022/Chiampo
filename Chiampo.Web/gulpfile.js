@@ -1,34 +1,41 @@
-"use strict";
+const { src, series, dest, watch } = require('gulp');
+const sass = require('gulp-sass');
+const uglifycss = require('gulp-uglifycss');
+const imagemin = require('gulp-imagemin');
 
-var gulp = require("gulp");
-var sass = require("gulp-sass");
-var uglifycss = require("gulp-uglifycss");
+// SASS Task
+const sassPath = './wwwroot/sass/*.sass';
+function sassTask() {
+  return src(sassPath)
+    .pipe(sass().on('error', sass.logError))
+    .pipe(dest('./wwwroot/css/'));
+}
 
-sass.compiler = require("node-sass");
-
-gulp.task("sass", function () {
-  return gulp
-    .src("./wwwroot/sass/*.sass")
-    .pipe(sass().on("error", sass.logError))
-    .pipe(gulp.dest("./css"));
-});
-
-gulp.task("css", function () {
-  gulp
-    .src("./wwwroot/css/*.css")
+// CSS Minify Task
+const cssPath = './wwwroot/css/*.css';
+function cssTask() {
+  return src(cssPath)
     .pipe(
       uglifycss({
         uglyComments: true,
       })
     )
-    .pipe(gulp.dest("./wwwroot/dist/"));
-});
+    .pipe(dest('./wwwroot/dist/css'));
+}
 
-gulp.task("run", ["sass", "css"]);
+// IMG Task
+function imgTask() {
+  return src('./wwwroot/images/*')
+    .pipe(imagemin())
+    .pipe(dest('./wwwroot/dist/images'));
+}
 
-gulp.task("watch", function () {
-  gulp.watch("./wwwroot/sass/*.sass", ["sass"]);
-  gulp.watch("./wwwroot/css/*.css", ["css"]);
-});
+// Watch Task
+function watchTask() {
+  watch([sassPath, cssPath], { interval: 1000 }, series(sassTask, cssTask));
+}
 
-gulp.task("default", ["run", "watch"]);
+exports.sassTask = sassTask;
+exports.cssTask = cssTask;
+exports.imgTask = imgTask;
+exports.default = series(imgTask, watchTask);
