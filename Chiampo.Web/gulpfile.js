@@ -1,10 +1,11 @@
+/// <binding />
 const { src, series, dest, watch } = require('gulp');
 const sass = require('gulp-sass');
 const uglifycss = require('gulp-uglifycss');
 const imagemin = require('gulp-imagemin');
 
 // SASS Task
-const sassPath = './wwwroot/sass/*.sass';
+const sassPath = './wwwroot/css/*.scss';
 function sassTask() {
   return src(sassPath)
     .pipe(sass().on('error', sass.logError))
@@ -20,19 +21,19 @@ function cssTask() {
         uglyComments: true,
       })
     )
-    .pipe(dest('./wwwroot/dist/css'));
+    .pipe(dest('./wwwroot/dist/css/'));
 }
 
 // IMG Task
 function imgTask() {
   return src('./wwwroot/images/*')
     .pipe(imagemin())
-    .pipe(dest('./wwwroot/dist/images'));
+    .pipe(dest('./wwwroot/dist/images/'));
 }
 
 // Watch Task
 function watchTask() {
-  watch([sassPath, cssPath], { interval: 1000 }, series(sassTask, cssTask));
+  watch(sassPath, { interval: 1000 }, series(sassTask, cssTask));
 }
 
 exports.sassTask = sassTask;

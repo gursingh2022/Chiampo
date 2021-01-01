@@ -11,10 +11,11 @@
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Folder Include="wwwroot\js\counter\" />
-    <Folder Include="wwwroot\js\todo\" />
-    <Folder Include="Views\Projects\" />
-    <Folder Include="wwwroot\js\projects\" />
+    <TypeScriptCompile Remove="node_modules\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="wwwroot\js\projects\counter\" />
+    <Folder Include="wwwroot\js\projects\todo\" />
     <Folder Include="wwwroot\js\projects\colour-flipper\" />
   </ItemGroup>
   <ItemGroup>
@@ -29,15 +30,15 @@
     <PackageReference Include="Microsoft.Data.SqlClient" Version="2.1.0" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="wwwroot\js\counter\counter.ts" />
+    <None Include="wwwroot\js\projects\counter\counter.ts" />
     <None Include="wwwroot\js\projects\colour-flipper\colourFlipper.ts" />
   </ItemGroup>
   <ItemGroup>
+    <Content Remove="package-lock.json" />
     <Content Remove="tsconfig.json" />
-    <Content Remove="tsconfig.json" />
-    <Content Remove="wwwroot\js\counter\counter.js.map" />
-    <Content Remove="wwwroot\js\counter\counter.js" />
-    <Content Remove="wwwroot\js\counter\counter.js.map" />
-    <Content Remove="wwwroot\js\counter\counter.js" />
+    <Content Remove="wwwroot\js\projects\counter\counter.js.map" />
+    <Content Remove="wwwroot\js\projects\counter\counter.js" />
+    <Content Remove="wwwroot\js\projects\counter\counter.js.map" />
+    <Content Remove="wwwroot\js\projects\counter\counter.js" />
   </ItemGroup>
 </Project>
